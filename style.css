@@ -36,6 +36,15 @@ input, button{
   width: 500px;
   margin: 0 auto 0;
 }
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
 .new-task__input {
   width: 56%;
   display: inline-block;
