@@ -11,7 +11,7 @@ ul {
 li, h3 {
   list-style:none;
 }
-input,button{
+input, button{
   outline:none;
 }
 .header {
@@ -27,7 +27,8 @@ input,button{
   font-family: fantasy, cursive;
 }
 @media (max-width:768px) {
-  .header { text-align: center;
+  .header {
+    text-align: center;
   }
 }
 .todo {
@@ -128,20 +129,20 @@ h3,
 
 /* Completed */
 .completed-task__label {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .input {
-  display:none
+  display: none
 }
 
 .edit-mode__input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .edit-mode__label {
-  display:none;
+  display: none;
 }
