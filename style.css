@@ -8,7 +8,7 @@ ul {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+li {
   list-style:none;
 }
 input, button{
@@ -57,7 +57,7 @@ input, button{
   color: #3a3A3a;
 }
 /* Heading */
-h3,
+.todo__title,
 .new-task__label {
   color: #333;
   font-weight: 700;
