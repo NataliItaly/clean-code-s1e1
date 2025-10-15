@@ -94,21 +94,15 @@ function taskIncompleted() {
   bindTaskEvents(listItem, taskCompleted);
 }
 
-//The glue to hold it all together.
-//Set the click handler to the addTask function.
 addButton.addEventListener("click",addTask);
 
 function bindTaskEvents(taskListItem,checkBoxEventHandler) {
-  //select ListItems children
   const checkBox = taskListItem.querySelector(".task__checkbox");
   const editButton = taskListItem.querySelector(".edit__btn");
   const deleteButton = taskListItem.querySelector(".delete__btn");
 
-  //Bind editTask to edit button.
   editButton.addEventListener('click', editTask);
-  //Bind deleteTask to delete button.
   deleteButton.addEventListener('click', deleteTask);
-  //Bind taskCompleted to checkBoxEventHandler.
   checkBox.addEventListener('change', checkBoxEventHandler);
 }
 
@@ -121,10 +115,3 @@ function bindTasks(parent, handler) {
 bindTasks(incompleteTaskHolder, taskCompleted);
 bindTasks(completedTasksHolder, taskIncompleted);
 
-
-
-// Issues with usability don't get seen until they are in front of a human tester.
-
-//prevent creation of empty tasks.
-
-//Change edit to save when you are in edit mode.
