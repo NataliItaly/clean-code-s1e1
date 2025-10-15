@@ -75,10 +75,7 @@ function addTask() {
 //Edit an existing task.
 
 function editTask() {
-  console.log("Edit Task...");
-  console.log("Change 'edit' to 'save'");
   const listItem=this.parentNode;
-  console.log(listItem)
   const editInput=listItem.querySelector('.task__input');
   const label=listItem.querySelector(".task__label");
   editInput.classList.toggle('edit-task__input');
@@ -103,8 +100,6 @@ function editTask() {
 
 //Delete task.
 function deleteTask() {
-  //console.log("Delete Task...");
-
   const listItem=this.parentNode;
   const ul=listItem.parentNode;
   //Remove the parent list item from the ul.
@@ -114,8 +109,6 @@ function deleteTask() {
 
 //Mark task completed
 function taskCompleted() {
-  //console.log("Complete Task...");
-
   //Append the task list item to the #completed-tasks
   const listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
@@ -124,7 +117,6 @@ function taskCompleted() {
 
 
 function taskIncompleted() {
-  //console.log("Incomplete Task...");
   //Mark task as incomplete.
   //When the checkbox is unchecked
   //Append the task list item to the #incompleteTasks.
@@ -147,7 +139,6 @@ addButton.addEventListener("click",ajaxRequest);
 
 
 const bindTaskEvents=function(taskListItem,checkBoxEventHandler) {
-  //console.log("bind list item events");
   //select ListItems children
   const checkBox=taskListItem.querySelector("input[type=checkbox]");
   const editButton=taskListItem.querySelector(".edit__btn");
