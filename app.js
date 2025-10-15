@@ -79,11 +79,10 @@ function deleteTask() {
 }
 
 
-//Mark task completed
+// Mark task completed
 function taskCompleted() {
-  //Append the task list item to the #completed-tasks
-  const listItem=this.parentNode;
-  completedTasksHolder.appendChild(listItem);
+  const listItem=this.closest('li');
+  completedTasksHolder.append(listItem);
   bindTaskEvents(listItem, taskIncompleted);
 }
 
