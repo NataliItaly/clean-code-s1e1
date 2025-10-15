@@ -154,15 +154,15 @@ const bindTaskEvents=function(taskListItem,checkBoxEventHandler) {
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
-for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
+for (let child of incompleteTaskHolder.children) {
   //bind events to list items chldren(tasksCompleted)
-  bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
+  bindTaskEvents(child, taskCompleted);
 }
 
 //cycle over completedTasksHolder ul list items
-for (let i = 0; i < completedTasksHolder.children.length; i++) {
+for (let child of completedTasksHolder.children) {
     //bind events to list items chldren(tasksIncompleted)
-    bindTaskEvents(completedTasksHolder.children[i],taskIncompleted);
+    bindTaskEvents(child, taskIncompleted);
 }
 
 
