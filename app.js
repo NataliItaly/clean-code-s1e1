@@ -71,12 +71,11 @@ function editTask() {
 };
 
 
-//Delete task.
+// Delete task.
 function deleteTask() {
-  const listItem=this.parentNode;
-  const ul=listItem.parentNode;
-  //Remove the parent list item from the ul.
-  ul.removeChild(listItem);
+  const listItem=this.closest('li');
+  const ul=listItem.closest('ul');
+  ul.remove(listItem);
 }
 
 
