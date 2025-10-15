@@ -4,38 +4,47 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
+
 li {
-  list-style:none;
+  list-style: none;
 }
+
 input, button{
-  outline:none;
+  outline: none;
 }
+
 .header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .header__img {
   width: 100%;
 }
+
 .header__link {
   font-family: fantasy, cursive;
 }
+
 @media (max-width:768px) {
   .header {
     text-align: center;
   }
 }
+
 .todo {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
+
 .visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -45,14 +54,17 @@ input, button{
   width: 1px;
   overflow: hidden;
 }
+
 .new-task__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
+
 .new-task__row {
   display: flex;
 }
+
 .btn {
   background: none;
   border: 0px;
@@ -62,9 +74,11 @@ input, button{
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 .btn:hover {
   color: #3a3A3a;
 }
+
 /* Heading */
 .todo__title,
 .new-task__label {
@@ -76,6 +90,7 @@ input, button{
   margin: 0;
   text-transform: uppercase;
 }
+
 .input {
   margin: 0;
   font-size: 18px;
@@ -88,6 +103,7 @@ input, button{
   font-family: Lato, sans-serif;
   color: #888;
 }
+
 .input:focus {
   color: #333;
 }
@@ -97,6 +113,7 @@ input, button{
   display: block;
   margin: 0 0 20px;
 }
+
 .new-task__input {
   width: 318px;
 }
@@ -110,6 +127,7 @@ input, button{
   justify-content: space-between;
   align-items: center;
 }
+
 .task__item > * {
   vertical-align: middle;
 }
@@ -117,6 +135,7 @@ input, button{
 .task__checkbox {
   margin: 0 10px;
 }
+
 .task__label {
   width: 56%;
   display: inline-block;
@@ -125,14 +144,17 @@ input, button{
   box-sizing: border-box;
   font-size: 18px;
 }
+
 .task__input {
   display: none;
 }
+
 .task__delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
+
 .task__delete-img:hover {
   transform: rotateZ(0);
 }
@@ -144,7 +166,6 @@ input, button{
 }
 
 /* Edit Task */
-
 .edit-task__input {
   display: inline-block;
   width: 224px;
