@@ -145,12 +145,12 @@ input, button{
 
 /* Edit Task */
 
-.edit-mode__input {
+.edit-task__input {
   display: inline-block;
   width: 224px;
   flex-grow: 1;
 }
 
-.edit-mode__label {
+.edit-task__label {
   display: none;
 }
