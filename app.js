@@ -42,16 +42,11 @@ function createNewTaskElement(taskString) {
 
 
 function addTask() {
-  //Create a new list item with the text from the #new-task-input:
   if (!taskInput.value) return;
   const listItem=createNewTaskElement(taskInput.value);
-
-  //Append listItem to incompleteTaskHolder
-  incompleteTaskHolder.appendChild(listItem);
+  incompleteTaskHolder.append(listItem);
   bindTaskEvents(listItem, taskCompleted);
-
   taskInput.value="";
-
 }
 
 //Edit an existing task.
