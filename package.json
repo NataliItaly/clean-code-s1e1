@@ -1,0 +1,11 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "homepage": "https://NataliItaly.github.io/clean-code-s1e1",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
