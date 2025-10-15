@@ -50,7 +50,6 @@ function addTask() {
 }
 
 //Edit an existing task.
-
 function editTask() {
   const listItem=this.parentNode;
   const editInput=listItem.querySelector('.task__input');
@@ -59,10 +58,8 @@ function editTask() {
   label.classList.toggle('edit-task__label')
   const editBtn=listItem.querySelector(".edit__btn");
   const containsClass=listItem.classList.contains("edit-task");
-  //If class of the parent is .edit-task
+
   if (containsClass) {
-    //switch to .edit-mode
-    //label becomes the inputs value.
     label.innerText=editInput.value;
     editBtn.innerText="Edit";
   } else {
@@ -70,7 +67,6 @@ function editTask() {
     editBtn.innerText="Save";
   }
 
-  //toggle .edit-mode on the parent.
   listItem.classList.toggle("edit-task");
 };
 
