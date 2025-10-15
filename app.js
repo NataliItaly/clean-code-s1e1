@@ -3,7 +3,6 @@ const addButton = document.getElementsByTagName("button")[0];//first button
 const incompleteTaskHolder = document.getElementById("incompleted-tasks");//ul of #incompleteTasks
 const completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
 
-
 // Create new task
 function createNewTaskElement(taskString) {
   const listItem = document.createElement("li");
@@ -29,7 +28,6 @@ function createNewTaskElement(taskString) {
   const deleteButtonImg = document.createElement("img");
   deleteButtonImg.classList.add('task__delete-img')
 
-
   editButton.innerText = "Edit";
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
@@ -38,8 +36,6 @@ function createNewTaskElement(taskString) {
 
   return listItem;
 }
-
-
 
 function addTask() {
   if (!taskInput.value) return;
@@ -70,14 +66,12 @@ function editTask() {
   listItem.classList.toggle("edit-task");
 };
 
-
 // Delete task.
 function deleteTask() {
   const listItem = this.closest('li');
   const ul = listItem.closest('ul');
   ul.remove(listItem);
 }
-
 
 // Mark task completed
 function taskCompleted() {
