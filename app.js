@@ -1,59 +1,41 @@
-//Document is the DOM can be accessed in the console with document.window.
-// Tree is from the top, html, body, p etc.
-
-//Problem: User interaction does not provide the correct results.
-//Solution: Add interactivity so the user can manage daily tasks.
-//Break things down into smaller steps and take each step at a time.
-
-
-// Event handling, user interaction is what starts the code execution.
-
 const taskInput=document.getElementById("new-task-input");//Add a new task.
 const addButton=document.getElementsByTagName("button")[0];//first button
 const incompleteTaskHolder=document.getElementById("incompleted-tasks");//ul of #incompleteTasks
 const completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
 
-//New task list item
+// Create new task
 function createNewTaskElement(taskString) {
   const listItem=document.createElement("li");
   listItem.classList.add("task__item");
-  //input (checkbox)
-  const checkBox=document.createElement("input");//checkbx
+
+  const checkBox=document.createElement("input");
+  checkBox.type="checkbox";
   checkBox.classList.add('task__checkbox')
-  //label
-  const label=document.createElement("label");//label
+
+  const label=document.createElement("label");
   label.classList.add('task__label');
-  //input (text)
-  const editInput=document.createElement("input");//text
-  editInput.classList.add('task__input');
-  //button.edit
-  const editButton=document.createElement("button");//edit button
-  editButton.classList.add('btn', 'edit__btn');
-
-  //button.delete
-  const deleteButton=document.createElement("button");//delete button
-  deleteButton.classList.add('btn', 'delete__btn');
-  const deleteButtonImg=document.createElement("img");//delete button image
-  deleteButtonImg.classList.add('task__delete-img')
-
   label.innerText=taskString;
 
-  //Each elements, needs appending
-  checkBox.type="checkbox";
+  const editInput=document.createElement("input");
   editInput.type="text";
+  editInput.classList.add('task__input');
+
+  const editButton=document.createElement("button");
+  editButton.classList.add('btn', 'edit__btn');
+
+  const deleteButton=document.createElement("button");
+  deleteButton.classList.add('btn', 'delete__btn');
+  const deleteButtonImg=document.createElement("img");
+  deleteButtonImg.classList.add('task__delete-img')
+
 
   editButton.innerText="Edit";
   deleteButtonImg.src='./remove.svg';
   deleteButton.appendChild(deleteButtonImg);
 
+  listItem.append(checkBox, label, editInput, editButton, deleteButton);
 
-  //and appending.
-  listItem.appendChild(checkBox);
-  listItem.appendChild(label);
-  listItem.appendChild(editInput);
-  listItem.appendChild(editButton);
-  listItem.appendChild(deleteButton);
   return listItem;
 }
 
