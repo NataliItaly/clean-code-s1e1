@@ -46,7 +46,7 @@
             <label class="task__label">Pay Bills</label>
             <input type="text" class="input task__input" />
             <button class="btn edit__btn">Edit</button>
-            <button class="btn delete__btn">
+            <button class="btn delete__btn" title="delete task">
               <img
                 src="./remove.svg"
                 class="task__delete-img"
@@ -67,7 +67,7 @@
               class="input task__input edit-task__input"
             />
             <button class="btn edit__btn">Save</button>
-            <button class="btn delete__btn">
+            <button class="btn delete__btn" title="delete task">
               <img
                 src="./remove.svg"
                 class="task__delete-img"
@@ -81,11 +81,18 @@
         <h2 class="todo__title">Completed</h2>
         <ul class="task__list" id="completed-tasks">
           <li class="task__item">
-            <input type="checkbox" checked />
-            <label class="completed-task__label task">See the Doctor</label>
-            <input type="text" class="input task" />
+            <input
+              type="checkbox"
+              class="task__checkbox"
+              checked
+              title="delete completed task"
+            />
+            <label class="task__label completed-task__label"
+              >See the Doctor</label
+            >
+            <input type="text" class="input task__input" />
             <button class="btn edit__btn">Edit</button>
-            <button class="btn delete__btn">
+            <button class="btn delete__btn" title="delete task">
               <img
                 src="./remove.svg"
                 class="task__delete-img"
