@@ -80,7 +80,6 @@ function taskCompleted() {
   bindTaskEvents(listItem, taskIncompleted);
 }
 
-
 // Mark task as incompleted.
 function taskIncompleted() {
   const listItem = this.closest('li');

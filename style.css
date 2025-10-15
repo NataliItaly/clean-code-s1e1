@@ -114,10 +114,6 @@ input, button{
   margin: 0 0 20px;
 }
 
-.new-task__input {
-  width: 318px;
-}
-
 /* Task list */
 .task__item {
   overflow: hidden;
@@ -159,13 +155,11 @@ input, button{
   transform: rotateZ(0);
 }
 
-/* Completed */
 .completed-task__label {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Edit Task */
 .edit-task__input {
   display: inline-block;
   width: 224px;
